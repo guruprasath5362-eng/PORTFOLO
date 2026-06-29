@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script,js"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <h1>My Portfolio</h1>
+    <hr>
+
+    <!-- Dashboard / Navigation --> 
+     <a href="#chome">Home</a>
+     <a href="#contact">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#project">project</a>
+    <hr>
+
+    <!-- Home Section -->
+    <h2 id="home">Home</h2>
+    <p>Hello! My name is Guru Prasath.</p>
+    <p>I am a Computer Science student interested in Web Development, Python, and Data Science.</p>
+
+    <hr>
+
+    <!-- Skills Section -->
+    <h2 id="skills">Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>Tkinter</li>
+        <li>Git & GitHub</li>
+        <li>java</li>
+        <li>ui/ux</li>
+    </ul>
+
+    <hr>
+    <h2 id="project">Project</h2>
+    <p>minor project some has been done it for college purpose</p>
+    <hr>
+
+    <!-- Contact Section -->
+    <h2 id="contact">Contact</h2>
+    <p>Email: guru2344@gmail.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Location: 13b, gerugabakkam,Chennai, Tamil Nadu</p>
+    <!-- Contact Button -->
+<button onclick="openPopup()">Contact Me</button>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup()">&times;</span>
+
+        <h2>Contact Me</h2>
+
+        <form onsubmit="return validateForm()">
+
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <input type="text" id="phone" placeholder="Mobile Number">
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit</button>
+
+            <p id="error"></p>
+
+        </form>
+
+    </div>
+</div>
+
+    <hr>
+
+    <footer>
+        <p class="two">© 2026 Guru Prasath's Portfolio</p>
+    </footer>
+
+</body>
+</html>
+    
+</body>
+</html>
