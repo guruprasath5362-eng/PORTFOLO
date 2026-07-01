@@ -1,203 +1,197 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
+/* GLOBAL */
 body {
-    background: linear-gradient(135deg, #1A1A2E, #16213E);
-    color: #E5E7EB;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* =========================
-   LINKS
-========================= */
-a {
-    color: #8B93FF;
+/* HEADER */
+header {
+    background: #1e293b;
+    padding: 15px;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin: 10px;
     text-decoration: none;
-    padding: 6px;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
-a:hover {
-    color: #C7D2FE;
+nav a:hover {
+    color: #38bdf8;
 }
 
-/* =========================
-   HEADINGS
-========================= */
-h1 {
-    background: #16213E;
-    color: #FFFFFF;
-    padding: 12px;
-    border-radius: 6px;
+/* SECTION */
+.section {
+    padding: 60px 20px;
 }
 
-h2 {
-    display: inline-block;
-    background: #1F2A44;
-    color: #8B93FF;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-h2:hover {
-    transform: scale(1.05);
-    background: #2A3A5F;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-.Skills,
-.project {
-    margin-bottom: 20px;
-}
-
-.Skills ul,
-.project ul {
-    list-style-position: inside;
-    padding-left: 10px;
-}
-
-/* =========================
-   TEXT ELEMENTS
-========================= */
-li,
-p {
-    color: #D1D5DB;
-    margin-bottom: 8px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: right;
+/* SKILLS */
+.skill-box {
+    background: #1e293b;
     padding: 20px;
-    font-size: 14px;
-    color: #9CA3AF;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #334155;
 }
 
-/* =========================
-   CARD / BOX (.one)
-========================= */
-.one {
-    border: 3px solid #8B93FF;
-    border-radius: 12px;
-    height: 200px;
-    width: 200px;
-    margin: 30px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.skill-box:hover {
+    transform: translateY(-5px);
+    background: #334155;
 }
 
-.one:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(139, 147, 255, 0.4);
+/* TABLE */
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* =========================
-   DIVIDER
-========================= */
-hr {
+.academic-table th,
+.academic-table td {
+    border: 1px solid #334155;
+    padding: 12px;
+    text-align: center;
+}
+
+.academic-table th {
+    background: #0ea5e9;
+    color: white;
+}
+
+.academic-table tr:hover td {
+    background: #1e293b;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #334155;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+/* BUTTON */
+button {
+    background: #38bdf8;
     border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #8B93FF, transparent);
-    margin: 30px 0;
+    padding: 10px 20px;
+    color: #0f172a;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-@media screen and (max-width: 768px) {
-    body {
-        background: #232946;
-    }
-
-    .one {
-        margin: 20px auto;
-    }
+button:hover {
+    background: #0ea5e9;
 }
 
-/* =========================
-   POPUP OVERLAY
-========================= */
+/* POPUP OVERLAY */
 .popup {
     display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.85); /* matches body color */
+    backdrop-filter: blur(5px);
+
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 1000;
 }
 
-/* =========================
-   POPUP BOX
-========================= */
+/* POPUP BOX */
 .popup-content {
-    background: #16213E;
-    width: 320px;
+    background: #1e293b;
+    color: #e2e8f0;
+
     padding: 25px;
+    width: 320px;
+
     border-radius: 12px;
-    color: #F9FAFB;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+    animation: popupFade 0.3s ease;
 }
 
-/* Popup Heading */
-.popup-content h2 {
-    text-align: center;
-    color: #8B93FF;
-    background: none;
-    margin-bottom: 10px;
+/* CLOSE BUTTON */
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: 0.3s;
 }
 
-/* =========================
-   FORM ELEMENTS
-========================= */
+.close:hover {
+    color: #38bdf8;
+}
+
+/* INPUT FIELDS */
 .popup-content input,
 .popup-content textarea {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
-    background: #F9FAFB;
-    color: #1A1A2E;
-    border: none;
+    margin-top: 10px;
+
+    background: #0f172a;
+    color: #e2e8f0;
+
+    border: 1px solid #334155;
     border-radius: 6px;
+
     outline: none;
+    transition: 0.3s;
 }
 
-/* =========================
-   BUTTON
-========================= */
+.popup-content input:focus,
+.popup-content textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* BUTTON INSIDE POPUP */
 .popup-content button {
     width: 100%;
-    padding: 10px;
-    background: linear-gradient(135deg, #7C83FD, #5B5FEF);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
 }
 
-.popup-content button:hover {
-    background: linear-gradient(135deg, #5B5FEF, #3F46D1);
-    transform: translateY(-2px);
-}
-
-/* =========================
-   ERROR BOX
-========================= */
+/* ERROR TEXT */
 #error {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 6px;
-    color: #FFFFFF;
-    background: #7F1D1D;
-    border: 1px solid #F87171;
+    color: #f87171;
+    font-size: 14px;
 }
+
+/* ANIMATION */
+@keyframes popupFade {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;}
+
